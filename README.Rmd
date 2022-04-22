@@ -16,7 +16,7 @@ Title <- "Title of your paper goes here"
 
 # article1
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh///master?urlpath=rstudio)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jbelmiro/article1/master?urlpath=rstudio)
 
 This repository contains the data and code for our paper:
 
