@@ -1,0 +1,16 @@
+Package: article1
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R:
+    person("Joana", "Belmiro", , "jnetobelmiro@gmail.com", role = c("aut", "cre"))
+Description: This package includes the article and all associated data for raw material sources in south Portugal.
+License: MIT + file LICENSE
+ByteCompile: true
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Imports: bookdown,
+    here
+Suggests: devtools,
+    git2r
