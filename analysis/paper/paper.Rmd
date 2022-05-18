@@ -59,30 +59,37 @@ knitr::opts_chunk$set(
 
 Here is a citation [@Marwick2017]
 
-# Background
+## Previous research
 
-# Methods
+## Geological setting and chert outcrops
+
+### Geological setting
+
+The Algarve region is located in south Portugal, framed north and east by the Alentejo region and Spain respectively. To the west and south, it is bordered by the Atlantic ocean. Geologically, it is composed of two main geological units: the South Portuguese Zone (SPZ) and the Algarve basin. The SPZ is composed of four "domains" of different lithologies and ages, extending up to Alentejo, although all within the Paleozoic period. It is overlain unconformably by the Mesozoic sedimentary rocks of the basin [\@fernandes_new_2012]. The Algarve basin is one of broader Jurassic outcrops in Portugal [@malchus_microfacies_1988]. It corresponds to the mesozoic-cenozoic sediments which outcrop south of Portugal, from Cape of St. Vicent to Vila Real de St. António. The Algarve basin is associated with the opening of the central Atlantic and with the eventual oceanic crust formation in the western part of the Tethis sea, between the Algarve and North Africa [@terrinha_bacia_2013]. After the sedimentation period between the Triassic and the Sinemurian (Lower Jurassic), the mesozoic basin was divided in two sub-basins (western sub-basin and oriental sub-basin), until the Calovian (Middle Jurassic), when an uplift episode allowed a uniform sedimentation of the basin [@rocha_estudo_1976; @terrinha_bacia_2013]. The existence of two sub-basins and a structural higher area between them, allied with the expansion and retraction of the seas allowed a variation of sedimentation environments, ranging between external platform and internal platform, and continental, hemipelagic, or deep marine environments [@terrinha_bacia_2013]. It was this variance in deposition environments that created the variety of Paleozoic sedimentary facies, with moments of more or less homogeneity throughout this period.
+
+The Algarve basin is of essential importance for the existence of chert in the Algarve region, since it is in the Paleozoic sediments where chert nodules can be found. Paleozoic sedimentation in the basin starts in the Triassic, although the identification of chert nodules or beds is limited to the Lower to Upper Jurassic. It is at the start of the Lower Jurassic, during the Lower Pliesbachian (also named Carixian) that the Algarve basin started to separate into two sub-basins, until the Calovian (Middle Jurassic), when an uplift episode allowed a uniform sedimentation of the basin [@rocha_estudo_1976; @terrinha_bacia_2013]. During the Lower Pliesbachian, the sediments in the western sub-basin can be described as marine, of external platform, while the sediments of the eastern sub-basin are of an internal platform. The transition between the Lower Jurassic to the Middle Jurassic shows a hiatus, as there are no known sediments from the Toarcian to the Aaelinian in the basin, the sedimentation restarting only after the latter age. During the Upper Jurassic the lithofacies variation became more prominent, especially during the Upper Oxfordian-Lower Kimmeridgian, with a certain uniformity of the lithofacies in all the sub-basins during the Upper Kimmeridgian [@terrinha_bacia_2013].
+
+### Chert outcrops
+
+In general, the presence of chert in the Algarve region and be attributed to limestone or dolomitic limestone layers. They appear with relative frequency, and often as nodules of small to medium dimensions, although thin beds of chert can also be identified in some areas.
+
+As mentioned above, outcrops with chert nodules in the Algarve region can be found in the Paleozoic sediments from the Algarve Basin, more specifically in the Jurassic sediments. Chert nodules can be found within Lower, Middle and Upper Jurassic layers, although restricted to a limited number of layers within the stratigraphy and not present in every geological cut.
+
+Lower Jurassic geological layers with chert nodules can be mostly found in the Carixian-age sediments (also known as Pliensbachian) from the Sagres region, often outcropping in the cliffs by the beaches. These include the chert nodules and beds from Cabo de S. Vicente to Praia do Belixe, but also the small outcrop inland, in Ferrel. The chert nodules occur within limestone, dolomitic limestone and marly limestone. Further east one layer with chert nodules was also identified, but attributed to the Sinemurian-Toarcian, in a formation identified as "Limestones with *Paleodasucladus* and limestones with chert nodules". Described only in the Geologic Map at a 1 200 000 scale however, these chert nodules were characterized as micronodules [\@oliveira_carta_1992].
+
+Middle Jurassic geological layers with chert nodules are only found east of Sagres, in the Albufeira, Faro and Tavira region. These layers were attributed to the Malhão Formation, from the Aalenian-Bajocian age. In general, this formation was described as carbonated, marine and thick, and chert can be found in two different layers: monogenic conglomerates with micritic limestone intercalations with chert beds and nodules; microcrystalline limestones with chert nodules (pel-biomicrite). Another chert outcrop was identified in the Geologic Map at a 1 200 000 scale, attributed to the Bajocian-Batonian age and named "Alagoa conglomerates", with partially dolomitic limestones and chert nodules.
+
+Finally, Upper Jurassic sediments have been identified also in the Albufeira, Faro and Tavira area. The Jordana Formation was attributed to the Kimmeridgian/Kimmeridgian-Portlandian, and is characterized by dark-gray limestones, with frequent secondary silifications with abundant fossil fragments. In the Tavira area these layers were instead attributed to the Oxfordian-Kimmeridgian age.
+
+# Materials and methods
+
+## Fieldwork and geological samples
+
+To obtain geological samples several known chert outcrops were visited during August of 2021 and April of 2022, to prospect the Southwest and Southeast portion of the Algarve region (respectively). The first step of fieldwork included the review of previously known research, including geological maps, archaeological prospection works and raw material studies. These were followed as a reference guide for recovering samples. In the field, several chert nodules were collected within one single outcrop, in order to obtain as much variability as possible. The surrounding areas to the outcrops were also surveyed to understand other possible outcrops or secondary deposition environments. All samples were registered with resource to an android app which allows accurate coordinates to be associated with photos and csv data regarding the outcrop characteristics and conditions (i.e. position, abundance, visibility, access, geomorphology, chert morphology and conditions). Individual ID tags were associated with each sample and placed in the corresponding bag.
+
+\*\* outcrops were identified, \*\* in primary and \*\* in secondary deposition. From these, \*\* samples were recovered. The geological samples were taken to the laboratory where they were washed, relabeled to be inserted in the existing collection and analyzed macroscopically.
 
 # Results
-
-<!-- Here's some example analysis code: -->
-
-```{r get-data, eval = FALSE}
-# Note the path that we need to use to access our data files when rendering this document
-my_data <- read.csv(here::here('analysis/data/raw_data/my_csv_file.csv'))
-```
-
-```{r demo-plot, fig.cap="A plot of random numbers"}
-plot(rnorm(10))
-```
-
-Figure \@ref(fig:demo-plot) shows how we can have a caption and cross-reference for a plot
-
-```{r demo-inline-code}
-x <- round(pi, 2)
-```
-
-Here is an example of inline code `r x` in the middle of a sentence. 
 
 # Discussion
 
@@ -94,17 +101,18 @@ Here is an example of inline code `r x` in the middle of a sentence.
 
 \newpage
 
-# References 
+# References
 
 <!-- The following line ensures the references appear here for the MS Word or HTML output files, rather than right at the end of the document (this will not work for PDF files):  -->
 
-<div id="refs"></div>
+::: {#refs}
+:::
 
 \newpage
 
 ### Colophon
 
-This report was generated on `r Sys.time()` using the following computational environment and dependencies: 
+This report was generated on `r Sys.time()` using the following computational environment and dependencies:
 
 ```{r colophon, cache = FALSE}
 # which R packages and versions?
