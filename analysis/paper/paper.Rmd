@@ -1,14 +1,14 @@
 ---
 title: "Title Goes Here"
 author:
-  - Myfirstname Mylastname:
-      email: fl@oneplace.edu
-      institute: [UofO]
-      correspondence: true
-  - Yourfirstname Yourlastname:
-      email: fl@another.edu
-      institute: [UofA]
-      correspondence: false
+  - name: Joana Belmiro
+    email: fl@oneplace.edu
+    institute: [UofO]
+    correspondence: true
+  - name: João Cascalheira
+    email: fl@another.edu
+    institute: [UofA]
+    correspondence: false
 institute:
   - UofO: University of One Place
   - UofA: University of Another Place
@@ -55,11 +55,95 @@ knitr::opts_chunk$set(
 
 <!-- The actual document text starts here: -->
 
+```{r packages, include=FALSE}
+
+library(ggplot2)
+theme_set(theme_bw())
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(readr)
+library(ggspatial)
+library(ggrepel)
+library(dplyr)
+library(kableExtra)
+library(flextable)
+library(data.table)
+library(tidyr)
+
+```
+
+```{r databases, include=FALSE}
+
+petrography <- read_csv(here::here('analysis/data/raw_data/PetrographyDB.csv')) # Reading the petrography data
+chertfield <- read_csv(here::here('analysis/data/raw_data/chert_field.csv')) # Reading the field data
+
+fielddata <- chertfield %>% # Cleaning the Field data
+  mutate(Geography = case_when(long <= -8.2 ~ "Ocidental",
+                               long > -8.2 ~ "Oriental")) %>% 
+  filter(`Raw Material` == "Chert") %>% 
+  rename(SampleID = NewCode)
+
+```
+
+```{r map setup, include=FALSE}
+
+sf::sf_use_s2(FALSE)
+world <- ne_countries(scale = "medium", returnclass = "sf")
+#europe <- world[world$continent == "Europe",]
+europe_cropped <- st_crop(world, xmin = -15, xmax = -7.5,
+                                    ymin = 35, ymax = 37.6)
+
+
+```
+
+```{r map, echo=FALSE, include=FALSE}
+
+ggplot(data = europe_cropped) +
+  geom_sf() +
+  geom_point(data = chertfield, aes(x = long, y = lat, shape = State, color = State), size = 4) +
+  #geom_label_repel(data = chertsamples, aes(long, lat, label=NewCode), box.padding = 0.5, max.overlaps = 30) +
+  annotation_scale(location = "br", width_hint = 0.5) +
+  annotation_north_arrow(location = "br", which_north = "true", 
+        pad_x = unit(0.75, "in"), pad_y = unit(0.5, "in"),
+        style = north_arrow_fancy_orienteering)
+  #coord_sf(xlim = c(long_min, long_max), ylim = c(lat_min,lat_max), expand = FALSE)
+
+```
+
+```{r databasesetup, include=FALSE}
+
+
+
+CStable <- chertfield %>% 
+  select(NewCode, Site, `Sample variability`, State, Deposit, Type, Frequence, `State of site`, `Thin-sections`)
+
+```
+
+```{r cstable, echo=FALSE, include=FALSE}
+
+regulartable(CStable) %>% 
+  theme_zebra()
+
+```
+
 # Introduction
 
-Here is a citation [@Marwick2017]
+The South Iberian territory is a key area to understand cultural transitions since the Middle Paleolithic to early Prehistory. As a territory located at the tip of the European continent and with a generally warm climate even during the coldest periods which characterize the Pleistocene, South Iberia, and specifically South Portugal, witnessed several moments of crisis, cultural changes and behavioral adaptations. An example of this is the occupation of the territory by Neanderthal populations and their consequent disappearance. The southern part of Portugal is characterized by various Neanderthal occupations -- NEED STUDIES. The several cultural shifts of the Upper Paleolithic (UP) are also represented in the region, in sites which extend from the first Homo Sapiens occupations with the Gravettian up to the Magdalenian, such as the archaeological site of Vale Boi. This site, containing one of the most complete UP sequences of the Iberian Peninsula, offers the opportunity to understand the movements of the first groups of Humans to reach the territory, as well as the impact of abrupt climatic change in culture, with the Heinrich Event 2 and the Last Glacial Maximum. Finally, the existence of several Mesolithic, Neolithic and Chalcolithic settlements and occupations, the Algarve regions offers the possibility to study the replacement of the last hunter-gatherers of Europe by the first farms, and the subsequent transformations these communities went through.
 
-## Previous research
+\>\> From \*\*40 000\*\* cal BP to 3 000 cal BP, South Portugal has seen moments of crisis and cultural change of different kinds, which gives this territory a large potential for Pre-history archaeology studies and the study of human behavior in a wide chronological range. With such a wide chronology, differences in settlement patterns, subsistence techniques, climate, technology and culture, it is important, however, to find a unifying subject that can be studied, analyzed and compared, bringing together several studies and sites to create a more unified story of the evolution of human behavior. That subject may be the raw material which was used by Neanderthals, Human hunter-gatherers and farmers - that raw material is chert.
+
+Chert, whenever geologically present (and at times, even when it is not geologically present), has served as a raw material for the production of blanks to more specialized and complex tools. As a good quality rock, it was procured from close to far-away locations, transported, knapped, retouched, re-used, heated and sometimes traded, travelling long distances in the hands of different groups which produced them. Countless archaeologists and studies have shown the potential of this raw material to understand cultural aspects such as foraging strategies and territory use, mobility, shifts in technological necessities, cultural preferences, changes in raw material visibility and accessibility, or even the establishment, expansion and shrinkage of social networks.
+
+As a raw material, chert has been studied in South Portugal. The study of chert bearing outcrops has been a topic of interest for both geologists and archaeologists in the Algarve region, albeit for different reasons. Geological literature has been often focused on the processes that formed the seas and landmasses of the Algarve basins, as well as the paleobiology and paleobiogeography of the region. Archaeological literature has focused chert sources as a way to predict the existence of settlements, characterize hunter-gatherer culture throughout prehistory, and understand group mobility and social exchange through time.
+
+Geological studies in the Algarve region go back to the 19th century and throughout all of the 20th century, through the creation of geological cartography. These first works provided the basis for the geological knowledge of the Algarve basin, and it allowed further studies within the geosciences, as a large number of Doctoral theses.
+
+Archaeological studies focusing on raw materials, and especially chert, have been more scarce. In general, lithic technology studies in the Algarve have approached raw materials through a macroscopic methodology, often related to the location of the settlement (i.e., [\@bicho_o\_2003]) or the description of the collection (i.e., [\@cascalheira_tecnologia_2010], [\@marreiros_lithic_2015]). The work of Veríssimo (2005) focusing on the occurrence of chert in western Algarve provided the initial basis for comparative studies, maintaining however solely a macroscopic component. Finally, the creation of LusoLit (Telmo et al. 2016) and the collection of samples from the Algarve provided a new leap in the study of chert in the region.
+
+Given the existence of several chert-bearing outcrops in South Portugal, preliminary raw material studies, a region of archaeological importance and the existence of a rich archaeological record, the Algarve stands as a region full of potential for studies of chert and the development of a lithotheque which may serve for regional studies, but also for comparative studies outside, where chert may have been transported and traded, offering the chance to complete the record of exotic cherts which may be coming from the Algarve.
+
+Given this regional potential and opportunity to complete the knowledge of chert in South Portugal, the aim of this paper is to locate, map and characterize the chert sources in South Portugal, of potential social and economic importance to prehistoric communities. As a result, it is our objective continue the lithotheque LusoLit hosted at ICArEHB (University of Algarve) and provide all data in an online database.
 
 ## Geological setting and chert outcrops
 
@@ -67,7 +151,7 @@ Here is a citation [@Marwick2017]
 
 The Algarve region is located in south Portugal, framed north and east by the Alentejo region and Spain respectively. To the west and south, it is bordered by the Atlantic ocean. Geologically, it is composed of two main geological units: the South Portuguese Zone (SPZ) and the Algarve basin. The SPZ is composed of four "domains" of different lithologies and ages, extending up to Alentejo, although all within the Paleozoic period. It is overlain unconformably by the Mesozoic sedimentary rocks of the basin [\@fernandes_new_2012]. The Algarve basin is one of broader Jurassic outcrops in Portugal [@malchus_microfacies_1988]. It corresponds to the mesozoic-cenozoic sediments which outcrop south of Portugal, from Cape of St. Vicent to Vila Real de St. António. The Algarve basin is associated with the opening of the central Atlantic and with the eventual oceanic crust formation in the western part of the Tethis sea, between the Algarve and North Africa [@terrinha_bacia_2013]. After the sedimentation period between the Triassic and the Sinemurian (Lower Jurassic), the mesozoic basin was divided in two sub-basins (western sub-basin and oriental sub-basin), until the Calovian (Middle Jurassic), when an uplift episode allowed a uniform sedimentation of the basin [@rocha_estudo_1976; @terrinha_bacia_2013]. The existence of two sub-basins and a structural higher area between them, allied with the expansion and retraction of the seas allowed a variation of sedimentation environments, ranging between external platform and internal platform, and continental, hemipelagic, or deep marine environments [@terrinha_bacia_2013]. It was this variance in deposition environments that created the variety of Paleozoic sedimentary facies, with moments of more or less homogeneity throughout this period.
 
-The Algarve basin is of essential importance for the existence of chert in the Algarve region, since it is in the Paleozoic sediments where chert nodules can be found. Paleozoic sedimentation in the basin starts in the Triassic, although the identification of chert nodules or beds is limited to the Lower to Upper Jurassic. It is at the start of the Lower Jurassic, during the Lower Pliesbachian (also named Carixian) that the Algarve basin started to separate into two sub-basins, until the Calovian (Middle Jurassic), when an uplift episode allowed a uniform sedimentation of the basin [@rocha_estudo_1976; @terrinha_bacia_2013]. During the Lower Pliesbachian, the sediments in the western sub-basin can be described as marine, of external platform, while the sediments of the eastern sub-basin are of an internal platform. The transition between the Lower Jurassic to the Middle Jurassic shows a hiatus, as there are no known sediments from the Toarcian to the Aaelinian in the basin, the sedimentation restarting only after the latter age. During the Upper Jurassic the lithofacies variation became more prominent, especially during the Upper Oxfordian-Lower Kimmeridgian, with a certain uniformity of the lithofacies in all the sub-basins during the Upper Kimmeridgian [@terrinha_bacia_2013].
+The Algarve basin is of essential importance for the existence of chert in the Algarve region, since it is in the Paleozoic sediments where chert nodules can be found. Paleozoic sedimentation in the basin starts in the Triassic, although the identification of chert nodules or beds is limited to the Lower to Upper Jurassic. It is at the start of the Lower Jurassic, during the Lower Pliesbachian (also named Carixian) that the Algarve basin started to separate into two sub-basins, until the Calovian (Middle Jurassic), when an uplift episode allowed a uniform sedimentation of the basin [@rocha_estudo_1976; @terrinha_bacia_2013]. During the Lower Pliensbachian, the sediments in the western sub-basin can be described as marine, of external platform, while the sediments of the eastern sub-basin are of an internal platform. The transition between the Lower Jurassic to the Middle Jurassic shows a hiatus, as there are no known sediments from the Toarcian to the Aaelinian in the basin, the sedimentation restarting only after the latter age. During the Upper Jurassic the lithofacies variation became more prominent, especially during the Upper Oxfordian-Lower Kimmeridgian, with a certain uniformity of the lithofacies in all the sub-basins during the Upper Kimmeridgian [@terrinha_bacia_2013].
 
 ### Chert outcrops
 
@@ -83,15 +167,65 @@ Finally, Upper Jurassic sediments have been identified also in the Albufeira, Fa
 
 # Materials and methods
 
-## Fieldwork and geological samples
+To identify the chert outcrops present in South Portugal and understand the chert's characteristics, a macroscopic and petrographic approach was applied to the study of geological samples.
 
-To obtain geological samples several known chert outcrops were visited during August of 2021 and April of 2022, to prospect the Southwest and Southeast portion of the Algarve region (respectively). The first step of fieldwork included the review of previously known research, including geological maps, archaeological prospection works and raw material studies. These were followed as a reference guide for recovering samples. In the field, several chert nodules were collected within one single outcrop, in order to obtain as much variability as possible. The surrounding areas to the outcrops were also surveyed to understand other possible outcrops or secondary deposition environments. All samples were registered with resource to an android app which allows accurate coordinates to be associated with photos and csv data regarding the outcrop characteristics and conditions (i.e. position, abundance, visibility, access, geomorphology, chert morphology and conditions). Individual ID tags were associated with each sample and placed in the corresponding bag.
+Geological samples were obtained through fieldwork, during August of 2021 (west Algarve) and April to June of 2022 (east Algarve), and included visits to previously known outcrops and prospection of areas identified in geological maps. The first step of fieldwork included the review of previously known research, including geological maps, archaeological prospection works and raw material studies. These were followed as a reference guide for recovering samples. Whenever necessary, samples from previous prospection works were consulted, from the LusoLit lithoteque from ICArEHB at the University of Algarve and the thin-sections at the University of Évora. Whenever coordinates or specific locations for known outcrops were available, those were visited and then the surrounding area was prospected to understand the extension of the outcrops and possible secondary deposition outcrops nearby. In all other situations, several locations with potential to find outcrops were selected from polygons where formations with chert were known to outcrop.
 
-\*\* outcrops were identified, \*\* in primary and \*\* in secondary deposition. From these, \*\* samples were recovered. The geological samples were taken to the laboratory where they were washed, relabeled to be inserted in the existing collection and analyzed macroscopically.
+Samples were collected whenever possible, focusing both primary and secondary outcrops. When the outcrops showed macroscopic differences between the cherts, several samples were collected, in order to obtain as much variability as possible. All samples were registered with resource to an android app which allows accurate coordinates to be associated with photos and csv data regarding the outcrop characteristics and conditions (i.e. abundance, visibility, access, geomorphology, chert morphology and conditions). All data related to the app and dataset for the variables recorded can be found in the supplementary materials. Individual ID tags were associated with each sample, which was washed and labeled in the laboratory.
+
+All geological samples were analyzed macroscopically following a ==pre-established dataset==. The variables were defined based on specialized literature and the dataset with the variables can be found in the Supplementary materials. The goal of this analysis was to describe the cherts and their enclosing rocks in a detailed and objective manner. For a comparative analysis with archaeological artefacts, other methods are inconvenient since they are destructive and often difficult to analyze large assemblages. Macroscopic analyses have the advantage of being less costly and easy to apply. Establishing a reliable macroscopic characterization and understanding the potential of macroscopy to differentiate between cherts, outcrops and formations is essential to apply the methodology with archaeological materials and establish comparisons. A small hand-lens of 10x magnification was used for this analysis, followed by a higher magnification analysis with the resource of a Nikon SMZ25 stereomicroscope, focusing especially aspects like inclusions and fossil content.
+
+Thin-sections were produced for geological samples of all formations, focusing on obtaining petrographic data which reflected the variability observed at a macroscopic level. In total, 29 thin-sections were produced (thin-section database info), divided in three groups: 1) 20 thin-sections of geological samples from different outcrops within the western section of the Algarve, recovered from the 2021 fieldwork; 2) 9 thin-sections of geological samples from different outcrops from the eastern section of the Algarve, recovered from the 2022 fieldwork; 3) 1 thin-section of a geological sample recovered from previous works (\<2021), which was not identified in the latter prospections. Although primary outcrops were prioritized, thin-sections of secondary deposition samples were also produced, in order to characterize the chert from most visited locations. Information about the thin-sections, including the laboratories in which they were made can be consulted in the Supplementary materials.
+
+All thin-sections were analyzed using a Nikon LV100ND or a Leica DM2500 P and following standard petrographic description (full descriptions of the variables considered for the petrographic description can be found in the Supplementary materials). Three geological samples from western Algarve (previously broken for thin-section production) were also chosen for X-ray diffraction analysis, which was made at the **CSIC** in Barcelona, using a Bruker D8-A25 with a Cu tube and ultra-fast PSD detector.
+
+All descriptions (macroscopic, petrographic and XRD data) and accompanying photographs will be available online on a database, and downloadable as PDF files. The paper was written with resource to R and R Studio and can be found open-source at the **link**.
 
 # Results
 
+Eighteen outcrops (primary and secondary) were revisited or identified in the Algarve region, nine in the westernmost territory and nine to the east (between Loulé and Tavira). From these, 70 samples were recovered and analyzed. Some of these samples were recovered as isolated finds or in secondary settings.
+
+On the westernmost part of the Algarve, there are mainly cherts from two different formations: Lower Jurassic and Upper Jurassic. The latter can be found in a single known outcrop - Praia da Mareta. Lower Jurassic outcrops are more common and have been better studied [@ribeiro_evolucao_2005]. These outcrops are heterogeneous, showing different characteristics and chert colors.
+
+The Lower Jurassic cherts can be grouped in three main macroscopic types: yellow and/or red type; grey/brown type; yellow and red with fossils type. These macroscopic types not only show differences in color, but also in the fossil content, visible at naked eye and stereomicroscope. The first two types are present in all outcrops. They are mainly characterized by dull to medium luster and opaque translucency, although some samples were sub-translucent. The feel ranges between the smooth and semi-smooth, although many of the Belixe cherts have a rough feel. In the Yellow/Red cherts, fossil content is present but visible only as white, red or yellow speckling. The Grey/Brown cherts show little fossil content, barely visible with the stereomicroscope. The Yellow/Red with fossils cherts show a large quantity of big fossils, which are easily seen at naked eye and can be identified under the stereomicroscope.
+
+The Lower Jurassic cherts of Western Algarve are composed mainly by microcrystalline quartz, with textures that range mostly from the wackestone to the packstone. In more than 50% of the samples, no fossil can be identified, as all fossils, albeit common to very frequent, are poorly preserved, filled with chalcedony or quartz, and without any identifiable morphology. Whenever identifiable, fossils present in the sample are: Echinoderms, Radiolarians, Sponge spicules and a Bivalve shell.
+
+Despite the similar characteristics between these cherts, independent of color or geography, the outcrops are heterogeneous and show varying characteristics, which may be of importance to distinguish between chert sources within the Lower Jurassic formation. These outcrops have been divided in four groups, following the available literature: Cabo de S. Vicente (including Cabo de S. Vicente and Aspa); Foz dos Fornos; Ponta dos Altos; Praia do Belixe (which includes Belixe Sul); and Ferrel.
+
+The Cabo de S. Vicente (CSV) and Aspa (ASP) chert is characterized by abundant nodules in the natural rock banks of the cliffs, appearing as horizontal layers within the parent rock. The banks seem to be mainly dolomite or dolomitic limestones. The process of dolomitization seems to have affected the chert nodules, as they often present different levels of silicification from the edges of the nodule to the interior (which is more silicified), which also affects the knapping quality. The nodules vary in size, ranging from small 4 cm in diameter circular nodules to bed-like groups of nodules of \~20 cm width. At the Aspa outcrops, the nodules are less frequent and smaller. Due to the proximity to the cliffs, the visibility of the chert nodules is good, and in present times, small chunks of chert (without cortex or with small amounts of parent rock attached) accumulate in secondary deposition nearby.
+
+Foz dos Fornos (FZF) and Ponta dos Altos (PdA) show similarities to the CSV outcrops. The nodules are visible in several banks of dolomite, dolomitic limestone and limestone, partially covered by soil. The nodules can be circular, around 5 cm diameter, or wide with nearly 20 cm of width. Despite their size, these cherts are frequently filled with fractures which fragment the larger nodules into smaller volumes of raw material. Alike CSV, FZF and PdA also shows cherts with differing degrees of dolomitization, although in apparent smaller quantities than CSV. Besides the abundant presence of primary outcrops, there are also abundant chert nodule fragments in secondary deposition, down the slope of the cliff (in the case of FzF) or at the top of the cliff, on a sand path (in the case of PdA). These are small, between 1-4 cm of width, but of easy access. Between the FZF chert and the PdA, the main differences seem to be the cortex and parent rock, which show differing reactions to hydrocloric acid, the first being a dolomite or dolomitic limestone, and the second being mostly a limestone, with some degree of dolomitization in certain areas.
+
+Praia do Belixe (PBLX) is characterized by the abundance of chert nodules throughout the dolomite layers of the cliff area. They are visible in certain areas of the cliff and within the rock shelters. The nodules can be small, around 5 cm of diameter, sometimes reaching more than \~30 cm of width, or bedded, as chert layers between the dolomite layers. The cherts show varying degrees of dolomitization, and are mostly characterized by coarse to semi-smooth feel, dull luster and a medium to low knapping quality. Unlike the other outcrops, no chert nodule fragments were found close to the cliffs, and sample could only be recovered directly from the embedded nodules in the cliff walls. Nodules scattered on the floor were only located at Belixe Sul (BLS), a primary outcrop nearly destroyed located on a field, north from the beach area. The chert in this outcrop showed no differences from PBLX, aside from the size of the nodules, which were smaller and often showed signs of post-depositional alterations.
+
+A third location for chert has been previously identified north of BLS. Belixe Norte (BLN) is located on a dirt road and unused agriculture field. Several chert fragments were collected in this location. However, BLN is in proximity to an archaeological site and several collected samples were lithic artefacts. No larger nodules or outcrop were identified in this location. The samples recovered from the location also seem to corroborate that BLN should not be considered an outcrop, as they do not match the local cherts and rather, resemble most the samples recovered from Eastern Algarve.
+
+Ferrel, unlike the other outcrops, is located inland and away from the coast. Due to its location in a homonimous village, the state of the outcrop is poor, and all samples were either recovered as scattered nodules or from larger blocks of rock, from a partially destroyed outcrop. The proximity of an archaeological site from the -- nearby also raises questions regarding the nodules found in secondary deposition, as these may be surface finds. Despite these caveats, the recovered samples are similar to those from the other outcrops, albeit with a better quality, being characterized with a shiny to medium luster and smooth to semi-smooth feel. All surface fragments and nodules were small, with around 2 to 3 cm of width which may be explained by the state of the outcrop.
+
+Unlike the outcrops from the Lower Jurassic of western Algarve, this region of the Algarve has only one identified outcrop for Upper Jurassic cherts. These are located at Praia da Mareta (MAR) and abundant, or in secondary deposition at Ponta da Atalaia (PtA). At Praia da Mareta the nodules are only easily accessible in the beach, where large chunks of the cliff (\~1 m in diameter) are transported by the waves. Several chert nodules of different sizes can be found in the parent rock washed ashore, ranging between 2 cm to 20 cm in diameter. The quality of the chert also varies, possibly related to different dolomitization stages of the nodules, although this may also be influenced by chemical and physical alterations to the chert. At Ponta da Atalaia the chert can be found atop the cliffs, with rare nodules scattered on the floor. The Upper Jurassic cherts are very similar to the Lower Jurassic, with dull to medium luster and grey/purple colors. The translucency ranges from opaque to areas where the chert is translucent. This translucency may be a significant difference do distinguish between outcrops. Petrographically, the cherts are also similar to the Lower Jurassic ones. The only identifiable difference is the presence of calcispheres. All samples from the Mareta outcrops seen under the petrographic microscope showed the presence of abundant calcispheres, which is not always apparent with the stereomicroscope. Based on the presence of calcispheres, we may also consider the samples recovered at Andorinha (AND) to be Upper Jurassic, which were uncommon and scattered at the top of the cliffs by the beach.
+
+On the eastern part of the Algarve, chert-bearing known formations are from the Middle to Upper Jurassic, known as the Malhão formation and the Jordana formation, respectively.
+
+The Malhão formation chert (dating to the Middle Jurassic) was identified in three outcrops, in the Faro parsish and the Tavira parish. Whenever in a primary outcrop, this chert was homogeneous. The secondary deposits were recent waterlines and slope deposits, and the cherts were often characterized by intense post-depositional alterations. In these cases, it was not possible to confirm the outcrop location. In these outcrops, the nodule frequency varied from common to abundant. The nodules are roundish, ranging between 3 to 5 cm of maximum width. In all cases, access to the outcrops was easy. Although the parent rock was hard, several chert nodules could be collected from the surface, accumulating further down in gentle slope deposits. The Malhão cherts show two differing macroscopic characteristics: pink/reddish cherts and grey cherts. In general, they are both characterized by a dull to medium luster, Opaque to Sub-translucent translucency and smooth to semi-smooth feel. They are easily identifiable through the high amounts of macroscopically visible inclusions, which look like white Speckling in plain sight. Under the stereomicroscope, several round fossils and long spicule-like shapes can be identified. The petrographic analysis shows for the Malhão cherts from Casal da Colina (primary and secondary outcrops) high amounts of dolomite within the chert. All of these cherts are characterized by a wackestone texture and high variety of identifiable fossils (although all poorly preserved and replaced by chalcedony or quartz). These fossils are: Sponge spicules, Radiolarians, Ostracods, Tentaculites (also previously identified by --), Echinoderms and Calcispheres.
+
+The Jordana formation chert (Upper Jurassic) was identified in one area in the Algarve, above Moncarapacho in the Olhão parish. Whenever in a primary outcrop, the chert was homogeneous, although alternated with nodules of other lithologies within the parent rock. No chert was identified in any secondary deposits, which might be related to the anthropic alteration of the landscape. Smaller nodules broken from the parent rock were identified near the primary source in a field. Whenever embedded in the parent rock, the nodules varied in size (\~1-10 cm) and were abundant, with a high level of difficulty in their removal, due to the hardness of the parent rock. The cherts show little macroscopic variability between nodule and outcrop. They are grey/brown (with visible yellow inclusions). Within nodule however, the cherts are heterogeneous, with dull and shiny or smooth and semi-smooth feel areas. Some of the nodules also show a variability of translucency, with areas which are translucent, with a very fine grain and little presence of visible inclusions. The petrographic analysis shows that the cherts range from a wackestone to packstone texture, which was already seen macroscopically. They are composed mostly of microcrystalline quartz, with the presence of fibrous chalcedony replacing the fossils and negligible percentages of other minerals. Fossils are poorly preserved in general, with a few being identifiable: calcispheres, bivalve shell, sponge spicules, Ostracod, Echinoderms and gastropod.
+
 # Discussion
+
+The prospection works and analyses to the collected geological samples show that the south of Portugal has high potential for raw material studies, especially regarding chert. The presence of chert-bearing outcrops in the westernmost part of the Algarve, center and east would provide several possibilities for sourcing and procurement whenever groups moved throughout the territory. This is further important when we consider the geology of this territory.The geology of the Algarve itself may have played an important part in how groups procured their raw materials, specifically, their chert, a task which has been identified as essential for hunter-gatherer groups. To the south, communities would only have access to chert-bearing outcrops up to the coast. To the north, the mountain range would not only have provided no chert nodules, but may have also hampered the movement of populations, forcing groups to move east and west instead of north or south. This movement may have facilitated the gathering of cherts from different formations within the Algarve, posteriorly then brought into the sites. Especially for Middle and Upper Paleolithic occupations, understanding the sources of chert in the Algarve may provide data about where in the territory they were sourcing their raw materials, and how they were using the territory when their movement was constrained by the Peninsula's natural barriers. This question remains unanswered, but raw material data and comparative studies between archaeological assemblages and geological samples may provide the necessary results to answer it.
+
+However, tracking these movements and procurement patterns would only be possible if the cherts from the different formations and outcrops could be traced back to their sources. This presented itself as a first caveat for this type of studies, since for the Algarve, for example, all cherts come from Jurassic formations in pelagic environments. Despite the similar formation environments, n general there seems to be relevant differences between the cherts of different formations and periods. This is further relevant given the fact that they are geographically distant. Within formations, however, there are no discernable differences, both at a macroscopic and petrographic level, as these do not seem to be useful to distinguish between outcrops. That is most obvious on the Lower Jurassic outcrops of west Algarve. The identified chert groups, which varied mostly in color and fossil content, are present in several outcrops. In this region, the variables which may be better used to understand which outcrops were visited may be the quality and size of the nodules. The latter, for example, is an important variable in the Belixe outcrops, which show the largest volumes of rock, even if the knapping quality is worse than some other available, smaller nodules. Size may be used in conjunction with other technological data, to understand whether different nodules were being explored differently based on their size, or their procurement was being preferred in relation to other smaller nodules in possibly closer outcrops in the region.
+
+The Upper Jurassic nodules of western Algarve also show larger volumes than those from the Lower Jurassic. This, together with the translucency, which is often characterized by sub-translucent fabrics, may be a good macroscopic indicator for the chert's provenance. However, for a reliable distinction between the Lower Jurassic and the Upper Jurassic cherts, petrographic analyses and the identification of calcispheres may be necessary.
+
+The differences identified between the cherts of the various formations can be seen both at a macroscopic and petrographic level. Given the formation setting, petrographically, all the cherts from the Algarve are fairly homogeneous - marine origin, in limestone or dolomitic limestone rocks, all formed during the Jurassic. The use of fossils for the identification of the cherts is also difficult, since these are often not well preserved enough to allow the identification of species that may connect a group of cherts. The size, frequency and preservation state of the fossils seems to be, then, one of the defining criteria for discerning cherts from different formations, and thus, different geographic areas. These characteristics seem to be observable macroscopically, as well, allowing the cherts from the three different areas and formations - West, Jordana and Malhão - to be differentiated without the need for thin-sections. This is specially important for archaeological collections, specially those which may be small, with small archaeological pieces, or for the study of older collection to which other means of analysis may not be available.
+
+This data seems to confirm the potential of a macroscopic analysis to study the cherts of the Algarve. Albeit applying different methodologies, such as petrographic analyses, to these cherts is a way of completing the petrographic study of a collection, applying reliably mostly a macroscopic analysis to the assemblages coming from southern Portugal helps tackle issues such as the destructiveness, costliness and time consumption of some methods.
+
+The research was able to complete the collection, providing samples of the available cherts which may be compared with archaeological samples. However, there are some caveats to this type of comparative studies. Landscapes have changed through time, specially with the influence of modern societies. House constructions, agricultural fields and roads, for example, have modified the landscape, possibly altering the availability and visibility of raw materials. The existence of chert in specific points in the map may not necessarily mean that they do not exist elsewhere. However, identifying characteristics which are common to most, if not all cherts of a region, may be a good indication that some cherts are not local.
+
+Another caveat regarding chert sources, and specially in a geographic area like the Algarve, is the possibility of some outcrops being submerged. Previous studies have identified the existence of Jurassic outcrops with chert nodules on the west coast, submerged by water. In times where the sea level was similar to the current one, these outcrops would not have been accessible, even during low tide, the only possibility for their procurement in nodules dragged to the shore. However, during periods where the sea level was lower due to water freezing in the polar caps (during the LGM, for example), large portions of the coast would have been accessible. This raises the question whether the chert reference collection is actually representative of all the variability of chert in the region, including the submerged coastal areas. For studies focusing periods like the Proto-solutrean and Solutrean in the Algarve, for example, where nearly 20 km of shore was exposed at the peak of the LGM, there may have been the exploitation of unknown sources or cherts with more variability than that known from the recovered samples. Despite the caveat, this raises the possibility to understand whether this new portion of landmass altered the raw material procurement patterns of these groups, or added new resources which had been previously unavailable. Studies which compare Gravettian and Magdalenian assemblages to Proto-solutrean and Solutrean assemblages, within one single site, may give new insights to this question.
 
 # Conclusion
 
