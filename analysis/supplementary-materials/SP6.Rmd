@@ -1,0 +1,111 @@
+---
+title: "Untitled"
+author: "Joana Belmiro"
+date: '2022-10-01'
+output: pdf_document
+---
+
+# Sample ID and provenance
+
+Sample ID: SP6_CSV
+
+Lithology: Chert
+
+Collection: LusoLit
+
+Outcrop: Cabo S. Vicente
+
+Unit/facies: Lower Jurassic
+
+***
+
+## Macroscopic description
+
+### **Color**
+
+The color distribution is Single and the color is Light gray (2.5Y 7/2).
+
+### **Fabric**
+
+The luster is Dull and the translucency is Opaque. The feel is Semi-smooth to Rough and the grain is fine. The distribution of the fabric is Even.
+
+### **Inclusions and fossil content**
+
+### **Cortex**
+
+The cortex is Outcrop type with a Gradual transition.
+
+### **Quality**
+
+The fracture is Conchoidal with Fractures. The knapping quality is Medium.
+
+### **Observations**
+
+***
+
+
+## Petrography analysis form
+
+### Textural classification
+
+**Texture**
+Mudstone
+
+**Microstructure**
+Massive
+
+
+***
+
+### Composition
+
+| Orthochem       | Type | %   | Description                             |
+| --------------- | ---- | --- | --------------------------------------- |
+| MiC quartz (gr) | SE   | 90  |                                         |
+| Dolomite        | SE   | 10  | Dolomite crystals have different sizes. | 
+
+| Allochem | Freq     | Description |
+| -------- | -------- | ----------- |
+| Oxides   | Uncommon |             |
+
+| Bioclasts  | Freq     | Description |
+| ---------- | -------- | ----------- |
+| Ghosts     | Uncommon |             |
+| Echinoderm | Uncommon |             |
+
+
+### Other textural characteristics
+
+**Porosity**
+
+Total porosity (%): 5
+
+Porosity: Vuggy
+
+***
+
+### Photos
+
+| Image ID | Aug. | Description                                                           |
+| -------- | ---- | --------------------------------------------------------------------- |
+| SP6_001  | 10x  | General view of oxides and a possible Echinoderm spine.               |
+| SP6_002  | 10x  | Ghosts with quartz filling.                                           |
+| SP6_003  | 10x  | Limit between chert and dolomitic limestone (cortex.)                 |
+| SP6_004  | 10x  | Possible Echinoderm spine.                                            |
+| SP6_005  | 20x  | Detail of rhomboid dolomite crystals close to the edge of the sample. | 
+ 
+***
+### Observations
+
+- Ghosts are filled with microcrystalline quartz and poorly preserved.
+- Dolomite is visible in the chert area closer to the cortex area.
+
+
+***
+### Analysis information
+
+- Analyst: JB
+
+- Date: 02.23.2022
+
+- Equipment: Leica DM2500 P
