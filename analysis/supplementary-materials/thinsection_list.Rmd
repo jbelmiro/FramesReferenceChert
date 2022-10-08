@@ -1,0 +1,45 @@
+---
+title: "List of thin sections"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+| Sample ID | Type               | Laboratory | Outcrop          | Sample collection |
+| --------- | ------------------ | ---------- | ---------------- | ----------------- |
+| SP6       | Covered            | UB         | Cabo S. Vicente  | 2021              |
+| SP7       | Covered            | UB         | Cabo S. Vicente  | 2021              |
+| SP9       | Covered            | UB         | Ponta dos Altos  | 2021              |
+| SP10      | Covered            | UB         | Ponta dos Altos  | 2021              |
+| SP14      | Covered            | UB         | Praia Belixe     | 2021              |
+| SP15      | Covered            | UB         | Praia Belixe     | 2021              |
+| SP18      | Covered            | UB         | Praia Belixe     | 2021              |
+| SP21      | Covered            | UB         | Belixe Sul       | 2021              |
+| SP23      | Covered            | UB         | Belixe Norte     | 2021              |
+| SP24      | Covered            | UB         | Cabo S. Vicente  | 2021              |
+| SP27      | Covered            | UB         | Cabo S. Vicente  | 2021              |
+| SP28      | Covered            | UB         | Aspa             | 2021              |
+| SP32      | Covered            | UB         | Foz dos Fornos   | 2021              |
+| SP33      | Covered            | UB         | Foz dos Fornos   | 2021              |
+| SP34      | Covered            | UB         | Ponta dos Altos  | 2021              |
+| SP34      | Covered            | UB         | Ponta dos Altos  | 2021              |
+| SP36      | Covered            | UB         | Ponta da Atalaia | 2021              |
+| SP39      | Covered            | UB         | Andorinha        | 2021              |
+| SP40      | Covered            | UB         | Ferrel           | 2021              |
+| SP42      | Covered            | UB         | Boca do Rio      | 2021              |
+| SP59      | Covered            | TSL        | Jordana          | 2022              |
+| SP61      | Covered            | TSL        | Peral            | 2022              |
+| SP56      | Covered            | TSL        | Jordana          | 2022              |
+| SP54      | Covered            | TSL        | Guilhim          | 2022              |
+| SP53      | Covered            | TSL        | Guilhim          | 2022              |
+| SP58      | Covered            | TSL        | Jordana          | 2022              |
+| SP55      | Covered            | TSL        | Caliços          | 2022              |
+| SP50      | Covered            | TSL        | Casal da Colina  | 2022              |
+| SP52      | Covered            | TSL        | Casal da Colina  | 2022              |
+| RT82      | Covered            | TSL        | Praia Belixe     | <2021             |
+
+
