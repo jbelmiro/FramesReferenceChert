@@ -1,63 +1,71 @@
-﻿Site,Name,Sample,NewCode,Sample variability,Raw Material,State,Visibility,Accessability,Deposit,Type,Frequence,State of site,Observations,lat,long,Thin-sections
-Cabo S. Vicente,CSV ,CSV_1,SP1,Homogeneous,Other,Primary,Reasonable,Difficult,Outcrop,Nodule,Ponctual,Bad,,37.02249,-8.99638,No
-Cabo S. Vicente,CSV,csv_2,SP2,Homogeneous,Chert,Primary,Reasonable,Difficult,,Nodule,Rare,Medium,,37.02239,-8.9963,No
-Cabo S. Vicente,CSV,csv_3,SP3,Homogeneous,Chert,Primary,Reasonable,,,Nodule,Ponctual,Good,,37.02324,-8.9954,No
-Cabo S. Vicente,CSV,csv_4,SP4,,Chert,Primary,Reasonable,Moderate,Outcrop,Bedded,Abundant,Medium,,37.0229,-8.9956,No
-Cabo S. Vicente,CSV,csv_5,SP5,,Chalcedony,Primary,Bad,Moderate,Outcrop,Nodule,Rare,Good,,37.02289,-8.99536,No
-Cabo S. Vicente,CSV,csv_6,SP6,Variable,Chert,Primary,Good,Moderate,Outcrop,Bedded,Abundant,Good,,37.02294,-8.99541,Yes
-Cabo S. Vicente,CSV,csv_7,SP7,,Chert,Primary,Good,Easy,Outcrop,Nodule,Abundant,Good,,37.02327,-8.99521,Yes
-Ponta dos Altos Este,PDA,pda-e_1,SP8,Variable,Chert,Primary,Bad,Moderate,Outcrop,Nodule,Ponctual,Good,,37.02737,-8.98043,No
-Ponta dos Altos Este,PDA,pda-e_2,SP9,Variable,Chert,Primary,Good,Moderate,Outcrop,Nodule,Abundant,Good,,37.02731,-8.98031,Yes
-Ponta dos Altos Este,PDA,pda-e_3,SP10,Homogeneous,Chert,Primary,Good,,Outcrop,Nodule,Abundant,Good,,37.02727,-8.98022,Yes
-Pousada do Infante,PTA,nyx_1,SP11,,Other,Isolated find,Good,Easy,,Rounded pebble,Rare,,,37.00468,-8.93353,No
-Praia do Belixe,BLX,blx_1,SP12,Homogeneous,Chert,Primary,Good,Easy,Outcrop,Nodule,Ponctual,Medium,,37.02599,-8.9632,No
-Praia do Belixe,BLX,blx_2,SP13,Variable,Chert,Primary,Good,Easy,Outcrop,Nodule,Abundant,Good,,37.02626,-8.96377,No
-Praia do Belixe,BLX,blx_3,SP14,Variable,Chert,Primary,Good,Easy,Outcrop,,Abundant,Good,,37.02609,-8.96346,Yes
-Praia do Belixe,BLX,blx_4,SP15,,Chert,Primary,Good,Easy,Outcrop,Bedded,Abundant,Good,,37.02623,-8.96391,No
-Praia do Belixe,BLX,blx_5,SP16,Homogeneous,Chert,Primary,Good,Easy,Outcrop,Nodule,Abundant,Good,,37.02606,-8.96411,No
-Praia do Belixe,BLX,blx_6,SP17,Variable,Chert,Primary,Good,Easy,Outcrop,Nodule,Abundant,Good,,37.02637,-8.96526,No
-Praia do Belixe,BLX,blx_7,SP18,Variable,Chert,Primary,Good,Easy,Outcrop,Nodule,Abundant,Good,,37.02663,-8.96717,Yes
-Praia do Belixe,BLX,blx_topo_1,SP19,Variable,Chert,Primary,Reasonable,Moderate,Outcrop,Nodule,Rare,Medium,,37.02625,-8.96421,No
-Belixe Sul,BLX,bls_1,SP20,Variable,Chert,Secondary,Good,Easy,Soil,Rounded pebble,Abundant,Bad,Small pieces,37.02818,-8.96326,No
-Belixe Sul,BLX,bls_2,SP21,Variable,Chert,Secondary,Good,Easy,Soil,Nodule,Abundant,,Bigger chunks,37.02784,-8.96343,Yes
-Belixe Sul,BLX,bls_3,SP22,Homogeneous,Chert,Primary,Good,Easy,Outcrop,Nodule,Ponctual,Good,,37.0278,-8.96342,No
-Belixe Norte,BLX,bln_1,SP23,Variable,Chert,Secondary,Good,Easy,Slope deposit,Nodule,Abundant,Bad,Less than bls,37.03654,-8.96175,Yes
-Cabo S. Vicente,CSV,csv_7,SP24,Homogeneous,Chert,Primary,Good,Easy,Outcrop,Nodule,Ponctual,Bad,,37.02342,-8.99481,No
-Cabo S. Vicente,CSV,csv_8,SP25,Homogeneous,Chert,Primary,Good,Easy,Outcrop,Nodule,Rare,Bad,,37.02273,-8.99385,No
-Cabo S. Vicente,CSV,cvs_9,SP26,Homogeneous,Chert,Secondary,Good,Easy,Outcrop,Rounded pebble,Abundant,Medium,,37.02353,-8.99455,No
-Cabo S. Vicente,CSV,csv_10,SP27,Homogeneous,Chert,Primary,Good,Easy,Outcrop,Nodule,Rare,Medium,,37.02254,-8.99352,Yes
-Aspa,CSV,aspa_1,SP28,Variable,Chert,Primary,Good,Moderate,Outcrop,Nodule,Ponctual,Medium,,37.02791,-8.99109,No
-Aspa,CSV,aspa_2,SP29,Variable,Chert,Secondary,Good,Easy,Outcrop,Nodule,Abundant,Medium,,37.02719,-8.99076,No
-Foz dos Fornos,FZF,fzf_1,SP30,Homogeneous,Chert,Primary,Good,Easy,Outcrop,Nodule,Rare,Good,,37.02466,-8.98959,No
-Foz dos Fornos,FZF,fzf_2,SP31,Variable,Chert,Secondary,Good,Easy,Outcrop,Nodule,Abundant,Good,"Very small, abundant pieces",37.02465,-8.98963,No
-Foz dos Fornos,FZF,fzf_3,SP32,Variable,Chert,Primary,Good,Easy,Outcrop,Nodule,Abundant,Good,,37.02446,-8.98989,Yes
-Foz dos Fornos,FZF,fzf_4,SP33,Variable,Chert,Primary,Good,Moderate,Outcrop,Nodule,Abundant,Good,,37.02444,-8.98969,No
-Ponta dos Altos Este 2,PDA,pda-este-_1,SP34,Variable,Chert,Primary,Good,Easy,Outcrop,Nodule,Abundant,Bad,Primario em desmantelamento,37.02671,-8.9795,Yes
-Belixe,BLX,blx_8,SP35,Homogeneous,Chert,Isolated find,Good,Easy,,Nodule,,Bad,,37.02642,-8.9688,No
-Ponta da Atalaia,PTA,pta_1,SP36,Variable,Chert,Isolated find,Good,Easy,,,Rare,Bad,,37.00231,-8.9313,No
-Ponta da Atalaia,PTA,pta_2,SP37,Variable,Chert,Secondary,Good,Easy,Slope,Nodule,Abundant,Bad,,37.00455,-8.93335,No
-Tabual,Tabual,tabual_1,SP38,Variable,Other,Secondary,Good,Easy,,,Ponctual,,,37.07762,-8.8776,No
-Andorinha,Andorinha,andorinha_1,SP39,Homogeneous,Chert,Secondary,Reasonable,Difficult,Slope deposit,Nodule,Ponctual,Bad,,37.05941,-8.85058,Yes
-Ferrel,FR,Ferrel_1,SP40,Variable,Chert,Primary,Good,Easy,Outcrop,Nodule,Abundant,Bad,em desmantelamento,37.11245,-8.72567,Yes
-Ferrel,FR,ferrel_2,SP41,Variable,Chert,Secondary,Good,Easy,Slope,Nodule,Ponctual,Bad,,37.11269,-8.72624,No
-Boca do Rio,boca,boca_1,SP42,Homogeneous,Other,Primary,Good,Moderate,Outcrop,Nodule,Rare,Good,,37.06636,-8.81306,Yes
-Anticlinal do Peral,anticlinal,anti_1,SP43,Homogeneous,Other,Secondary,Good,Easy,Outcrop,Nodule,Abundant,Bad,,37.17885,-8.17444,No
-Praia Andorinha,Andorinha_praia,andorinha_p_1,SP44,,,Secondary,,Easy,,Rounded pebble,Rare,,,37.055806,-8.85465,No
-Vale Boi,,,,,,Archaeological site,,,,,,,,37.087089,-8.810837,
-Alto Fica,AF,AP1,SP45,Homogeneous,Quartz,Secondary,Good,Moderate,Outcrop,,Ponctual,Bad,,37.21178,-8.10728,
-Alto Fica,AF,AP1,SP46,Homogeneous,Quartz,Secondary,Good,Moderate,Outcrop,,Ponctual,Bad,,37.21178,-8.10728,
-Casal da Colina,CdC,CdC_1,SP47,Homogeneous,Chert,Primary,Reasonable,Easy,Outcrop,Nodule,Rare,Bad,,37.10376,-7.94561,
-Casal da Colina,CdC,cdc_2,SP48,Variable,Chert,Secondary,Bad,Moderate,Water line,Nodule,Rare,Bad,,37.10384,-7.94559,
-Casal da Colina,CdC,cdc_2,SP49,Variable,Chert,Secondary,Bad,Moderate,Water line,Nodule,Rare,Bad,,37.10384,-7.94559,
-Casal da Colina,CdC,cdc_4,SP50,Homogeneous,Chert,Primary,Reasonable,Easy,Outcrop,Nodule,Ponctual,Bad,,37.10357,-7.94596,
-Casal da Colina,CdC,cdc_5,SP51,Homogeneous,Other,Primary,Good,Easy,Outcrop,Nodule,Abundant,Bad,,37.10358,-7.946,
-Casal da Colina,CdC,cdc_6,SP52,Homogeneous,Chert,Secondary,Bad,Easy,Slope deposit,Nodule,Rare,Bad,,37.10367,-7.94622,
-Guilhim,Gui,g_1,SP53,Variable,Chert,Secondary,Good,Moderate,Slope deposit,Nodule,Ponctual,,,37.09512,-7.93688,
-Guilhim,Gui,g_2,SP54,Homogeneous,Chert,Isolated find,Reasonable,Moderate,Slope deposit,Nodule,Rare,,,37.09512,-7.93667,
-Caliços,Cal,calicos_1,SP55,Homogeneous,Chert,Secondary,Good,Easy,Slope deposit,Nodule,Rare,Bad,em desmantelamento,37.10339,-7.80087,
-Jordana,Jor,mon1,SP56,Homogeneous,Chert,Secondary,Reasonable,Easy,Outcrop,Nodule,Abundant,Bad,,37.11549,-7.82989,
-Jordana,Jor,mon2,SP57,Homogeneous,Chert,Primary,Good,Easy,Outcrop,Nodule,Abundant,Bad,,37.11571,-7.82931,
-Jordana,Jor,mon3,SP58,Homogeneous,Chert,Primary,Good,Easy,Outcrop,Nodule,Ponctual,Bad,,37.1156,-7.8292,
-Jordana,Jor,moinho1,SP59,Homogeneous,Chert,Primary,Reasonable,Moderate,Outcrop,Nodule,Abundant,Medium,,37.10745,-7.79687,
-Jordana,Jor,moinho2,SP60,Homogeneous,Other,Primary,Reasonable,Easy,Outcrop,Nodule,Rare,Bad,,37.1077,-7.79675,
-Peral,Per,peral1,SP61,Homogeneous,Chert,Secondary,Good,Easy,Outcrop,Nodule,Ponctual,Bad,,37.12805,-7.8485,
+﻿Site,Name,Sample,NewCode,Age,Sample variability,Raw Material,State,Visibility,Accessability,Deposit,Type,Frequence,State of site,Observations,lat,long
+Cabo S. Vicente,CSV ,CSV_1,SP1,Lower Jurassic,Homogeneous,Other,Primary,Reasonable,Difficult,Outcrop,Nodule,Ponctual,Bad,,37.02249,-8.99638
+Cabo S. Vicente,CSV,csv_2,SP2,Lower Jurassic,Homogeneous,Chert,Primary,Reasonable,Difficult,,Nodule,Rare,Medium,,37.02239,-8.9963
+Cabo S. Vicente,CSV,csv_3,SP3,Lower Jurassic,Homogeneous,Chert,Primary,Reasonable,,,Nodule,Ponctual,Good,,37.02324,-8.9954
+Cabo S. Vicente,CSV,csv_4,SP4,Lower Jurassic,,Chert,Primary,Reasonable,Moderate,Outcrop,Bedded,Abundant,Medium,,37.0229,-8.9956
+Cabo S. Vicente,CSV,csv_5,SP5,Lower Jurassic,,Chalcedony,Primary,Bad,Moderate,Outcrop,Nodule,Rare,Good,,37.02289,-8.99536
+Cabo S. Vicente,CSV,csv_6,SP6,Lower Jurassic,Variable,Chert,Primary,Good,Moderate,Outcrop,Bedded,Abundant,Good,,37.02294,-8.99541
+Cabo S. Vicente,CSV,csv_7,SP7,Lower Jurassic,,Chert,Primary,Good,Easy,Outcrop,Nodule,Abundant,Good,,37.02327,-8.99521
+Ponta dos Altos Este,PDA,pda-e_1,SP8,Lower Jurassic,Variable,Chert,Primary,Bad,Moderate,Outcrop,Nodule,Ponctual,Good,,37.02737,-8.98043
+Ponta dos Altos Este,PDA,pda-e_2,SP9,Lower Jurassic,Variable,Chert,Primary,Good,Moderate,Outcrop,Nodule,Abundant,Good,,37.02731,-8.98031
+Ponta dos Altos Este,PDA,pda-e_3,SP10,Lower Jurassic,Homogeneous,Chert,Primary,Good,,Outcrop,Nodule,Abundant,Good,,37.02727,-8.98022
+Pousada do Infante,PTA,nyx_1,SP11,N/A,,Other,Isolated find,Good,Easy,,Rounded pebble,Rare,,,37.00468,-8.93353
+Praia do Belixe,BLX,blx_1,SP12,Lower Jurassic,Homogeneous,Chert,Primary,Good,Easy,Outcrop,Nodule,Ponctual,Medium,,37.02599,-8.9632
+Praia do Belixe,BLX,blx_2,SP13,Lower Jurassic,Variable,Chert,Primary,Good,Easy,Outcrop,Nodule,Abundant,Good,,37.02626,-8.96377
+Praia do Belixe,BLX,blx_3,SP14,Lower Jurassic,Variable,Chert,Primary,Good,Easy,Outcrop,,Abundant,Good,,37.02609,-8.96346
+Praia do Belixe,BLX,blx_4,SP15,Lower Jurassic,,Chert,Primary,Good,Easy,Outcrop,Bedded,Abundant,Good,,37.02623,-8.96391
+Praia do Belixe,BLX,blx_5,SP16,Lower Jurassic,Homogeneous,Chert,Primary,Good,Easy,Outcrop,Nodule,Abundant,Good,,37.02606,-8.96411
+Praia do Belixe,BLX,blx_6,SP17,Lower Jurassic,Variable,Chert,Primary,Good,Easy,Outcrop,Nodule,Abundant,Good,,37.02637,-8.96526
+Praia do Belixe,BLX,blx_7,SP18,Lower Jurassic,Variable,Chert,Primary,Good,Easy,Outcrop,Nodule,Abundant,Good,,37.02663,-8.96717
+Praia do Belixe,BLX,blx_topo_1,SP19,Lower Jurassic,Variable,Chert,Primary,Reasonable,Moderate,Outcrop,Nodule,Rare,Medium,,37.02625,-8.96421
+Belixe Sul,BLX,bls_1,SP20,Lower Jurassic,Variable,Chert,Secondary,Good,Easy,Soil,Rounded pebble,Abundant,Bad,Small pieces,37.02818,-8.96326
+Belixe Sul,BLX,bls_2,SP21,Lower Jurassic,Variable,Chert,Secondary,Good,Easy,Soil,Nodule,Abundant,,Bigger chunks,37.02784,-8.96343
+Belixe Sul,BLX,bls_3,SP22,Lower Jurassic,Homogeneous,Chert,Primary,Good,Easy,Outcrop,Nodule,Ponctual,Good,,37.0278,-8.96342
+Belixe Norte,BLX,bln_1,SP23,N/A,Variable,Chert,Secondary,Good,Easy,Slope deposit,Nodule,Abundant,Bad,Less than bls,37.03654,-8.96175
+Cabo S. Vicente,CSV,csv_7,SP24,Lower Jurassic,Homogeneous,Chert,Primary,Good,Easy,Outcrop,Nodule,Ponctual,Bad,,37.02342,-8.99481
+Cabo S. Vicente,CSV,csv_8,SP25,Lower Jurassic,Homogeneous,Chert,Primary,Good,Easy,Outcrop,Nodule,Rare,Bad,,37.02273,-8.99385
+Cabo S. Vicente,CSV,cvs_9,SP26,Lower Jurassic,Homogeneous,Chert,Secondary,Good,Easy,Outcrop,Rounded pebble,Abundant,Medium,,37.02353,-8.99455
+Cabo S. Vicente,CSV,csv_10,SP27,Lower Jurassic,Homogeneous,Chert,Primary,Good,Easy,Outcrop,Nodule,Rare,Medium,,37.02254,-8.99352
+Aspa,CSV,aspa_1,SP28,Lower Jurassic,Variable,Chert,Primary,Good,Moderate,Outcrop,Nodule,Ponctual,Medium,,37.02791,-8.99109
+Aspa,CSV,aspa_2,SP29,Lower Jurassic,Variable,Chert,Secondary,Good,Easy,Outcrop,Nodule,Abundant,Medium,,37.02719,-8.99076
+Foz dos Fornos,FZF,fzf_1,SP30,Lower Jurassic,Homogeneous,Chert,Primary,Good,Easy,Outcrop,Nodule,Rare,Good,,37.02466,-8.98959
+Foz dos Fornos,FZF,fzf_2,SP31,Lower Jurassic,Variable,Chert,Secondary,Good,Easy,Outcrop,Nodule,Abundant,Good,"Very small, abundant pieces",37.02465,-8.98963
+Foz dos Fornos,FZF,fzf_3,SP32,Lower Jurassic,Variable,Chert,Primary,Good,Easy,Outcrop,Nodule,Abundant,Good,,37.02446,-8.98989
+Foz dos Fornos,FZF,fzf_4,SP33,Lower Jurassic,Variable,Chert,Primary,Good,Moderate,Outcrop,Nodule,Abundant,Good,,37.02444,-8.98969
+Ponta dos Altos Este 2,PDA,pda-este-_1,SP34,Lower Jurassic,Variable,Chert,Primary,Good,Easy,Outcrop,Nodule,Abundant,Bad,Primario em desmantelamento,37.02671,-8.9795
+Belixe,BLX,blx_8,SP35,Lower Jurassic,Homogeneous,Chert,Isolated find,Good,Easy,,Nodule,,Bad,,37.02642,-8.9688
+Ponta da Atalaia,PTA,pta_1,SP36,Upper Jurassic,Variable,Chert,Isolated find,Good,Easy,,,Rare,Bad,,37.00231,-8.9313
+Ponta da Atalaia,PTA,pta_2,SP37,Upper Jurassic,Variable,Chert,Secondary,Good,Easy,Slope,Nodule,Abundant,Bad,,37.00455,-8.93335
+Tabual,Tabual,tabual_1,SP38,,Variable,Other,Secondary,Good,Easy,,,Ponctual,,,37.07762,-8.8776
+Andorinha,Andorinha,andorinha_1,SP39,Upper Jurassic,Homogeneous,Chert,Secondary,Reasonable,Difficult,Slope deposit,Nodule,Ponctual,Bad,,37.05941,-8.85058
+Ferrel,FR,Ferrel_1,SP40,Lower Jurassic,Variable,Chert,Primary,Good,Easy,Outcrop,Nodule,Abundant,Bad,em desmantelamento,37.11245,-8.72567
+Ferrel,FR,ferrel_2,SP41,Lower Jurassic,Variable,Chert,Secondary,Good,Easy,Slope,Nodule,Ponctual,Bad,,37.11269,-8.72624
+Boca do Rio,boca,boca_1,SP42,,Homogeneous,Other,Primary,Good,Moderate,Outcrop,Nodule,Rare,Good,,37.06636,-8.81306
+Anticlinal do Peral,anticlinal,anti_1,SP43,,Homogeneous,Other,Secondary,Good,Easy,Outcrop,Nodule,Abundant,Bad,,37.17885,-8.17444
+Praia Andorinha,Andorinha_praia,andorinha_p_1,SP44,,,,Secondary,,Easy,,Rounded pebble,Rare,,,37.055806,-8.85465
+Vale Boi,,,,,,,,,,,,,,,37.087089,-8.810837
+Alto Fica,AF,AP1,SP45,,Homogeneous,Quartz,Secondary,Good,Moderate,Outcrop,,Ponctual,Bad,,37.21178,-8.10728
+Alto Fica,AF,AP1,SP46,,Homogeneous,Quartz,Secondary,Good,Moderate,Outcrop,,Ponctual,Bad,,37.21178,-8.10728
+Casal da Colina,CdC,CdC_1,SP47,Middle Jurassic,Homogeneous,Chert,Primary,Reasonable,Easy,Outcrop,Nodule,Rare,Bad,,37.10376,-7.94561
+Casal da Colina,CdC,cdc_2,SP48,Middle Jurassic,Variable,Chert,Secondary,Bad,Moderate,Water line,Nodule,Rare,Bad,,37.10384,-7.94559
+Casal da Colina,CdC,cdc_3,SP49,Middle Jurassic,Variable,Chert,Secondary,Bad,Moderate,Water line,Nodule,Rare,Bad,,37.10384,-7.94559
+Casal da Colina,CdC,cdc_4,SP50,Middle Jurassic,Homogeneous,Chert,Primary,Reasonable,Easy,Outcrop,Nodule,Ponctual,Bad,,37.10357,-7.94596
+Casal da Colina,CdC,cdc_5,SP51,Middle Jurassic,Homogeneous,Other,Primary,Good,Easy,Outcrop,Nodule,Abundant,Bad,,37.10358,-7.946
+Casal da Colina,CdC,cdc_6,SP52,Middle Jurassic,Homogeneous,Chert,Secondary,Bad,Easy,Slope deposit,Nodule,Rare,Bad,,37.10367,-7.94622
+Guilhim,Gui,g_1,SP53,Middle Jurassic,Variable,Chert,Secondary,Good,Moderate,Slope deposit,Nodule,Ponctual,,,37.09512,-7.93688
+Guilhim,Gui,g_2,SP54,Middle Jurassic,Homogeneous,Chert,Isolated find,Reasonable,Moderate,Slope deposit,Nodule,Rare,,,37.09512,-7.93667
+Caliços,Cal,calicos_1,SP55,Middle Jurassic,Homogeneous,Chert,Secondary,Good,Easy,Slope deposit,Nodule,Rare,Bad,em desmantelamento,37.10339,-7.80087
+Jordana,Jor,mon1,SP56,Upper Jurassic,Homogeneous,Chert,Secondary,Reasonable,Easy,Outcrop,Nodule,Abundant,Bad,,37.11549,-7.82989
+Jordana,Jor,mon2,SP57,Upper Jurassic,Homogeneous,Chert,Primary,Good,Easy,Outcrop,Nodule,Abundant,Bad,,37.11571,-7.82931
+Jordana,Jor,mon3,SP58,Upper Jurassic,Homogeneous,Chert,Primary,Good,Easy,Outcrop,Nodule,Ponctual,Bad,,37.1156,-7.8292
+Jordana,Jor,moinho1,SP59,Upper Jurassic,Homogeneous,Chert,Primary,Reasonable,Moderate,Outcrop,Nodule,Abundant,Medium,,37.10745,-7.79687
+Jordana,Jor,moinho2,SP60,Upper Jurassic,Homogeneous,Other,Primary,Reasonable,Easy,Outcrop,Nodule,Rare,Bad,,37.1077,-7.79675
+Peral,Per,peral1,SP61,Upper Jurassic,Homogeneous,Chert,Secondary,Good,Easy,Outcrop,Nodule,Ponctual,Bad,,37.12805,-7.8485
+Oliveiras_1,OLV,oliv_1,SP62,Middle Jurassic,Variable,Chert,Secondary,Reasonable,Easy,Slope deposit,,Abundant,Bad,Very patinated but angular,37.13375,-7.71372
+oliveiras_1,OLV,oliv_2,SP63,Middle Jurassic,Homogeneous,Chert,Primary,Reasonable,Easy,Outcrop,Nodule,Ponctual,Bad,,37.13467,-7.71415
+oliveiras_1,OLV,oliv_3,SP64,Middle Jurassic,Homogeneous,Chert,Isolated find,Bad,Easy,,,Rare,Bad,Same place as oliv_2,37.13469,-7.71416
+malhao_1,MAH,malhao_1,SP65,Middle Jurassic,Homogeneous,Chert,Primary,Good,Easy,Outcrop,Nodule,Ponctual,Bad,Em desmantelamento,37.13827,-7.70908
+malhao_1,MAH,malhao_1,SP66,Middle Jurassic,Homogeneous,Chert,Primary,Good,Easy,Outcrop,Nodule,Ponctual,Bad,Em desmantelamento,37.13827,-7.70908
+cabeço descampado,DESCAM,descampado_1,SP67,N/A,Homogeneous,Chert,Secondary,Reasonable,Moderate,Slope deposit,Nodule,Ponctual,Bad,Destroyed outcrop,37.14232,-7.69188
+pedreira,PEH,pedr_1,SP68,N/A,Homogeneous,Chert,Secondary,Reasonable,Easy,Outcrop,Nodule,Rare,Bad,Destroyed outcrop,37.14399,-7.69642
+mar_1,MAR,mar_1,SP69,Upper Jurassic,Variable,Chert,Secondary,Good,Easy,Margin,Nodule,Abundant,Medium,,37.00581,-8.93712

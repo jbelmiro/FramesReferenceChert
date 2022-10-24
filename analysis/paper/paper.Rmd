@@ -60,6 +60,8 @@ knitr::opts_chunk$set(
 library(ggplot2)
 theme_set(theme_bw())
 library(sf)
+library(raster)
+library(spData)
 library(rnaturalearth)
 library(rnaturalearthdata)
 library(readr)
@@ -70,6 +72,9 @@ library(kableExtra)
 library(flextable)
 library(data.table)
 library(tidyr)
+library(tmap)
+
+install.packages("tmap")
 
 ```
 
@@ -86,6 +91,13 @@ fielddata <- chertfield %>% # Cleaning the Field data
 
 ```
 
+```{r map, echo=FALSE}
+
+
+
+```
+
+
 ```{r map setup, include=FALSE}
 
 sf::sf_use_s2(FALSE)
@@ -101,7 +113,7 @@ europe_cropped <- st_crop(world, xmin = -15, xmax = -7.5,
 
 ggplot(data = europe_cropped) +
   geom_sf() +
-  geom_point(data = chertfield, aes(x = long, y = lat, shape = State, color = State), size = 4) +
+  geom_point(data = chertfield, aes(x = long, y = lat, shape = State, color = Age), size = 4) +
   #geom_label_repel(data = chertsamples, aes(long, lat, label=NewCode), box.padding = 0.5, max.overlaps = 30) +
   annotation_scale(location = "br", width_hint = 0.5) +
   annotation_north_arrow(location = "br", which_north = "true", 
