@@ -1,0 +1,81 @@
+---
+title: "Analysis datasets"
+author: "Belmiro et. al"
+output: pdf_document
+classoption: landscape
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE, message = FALSE)
+
+```
+
+
+```{r callpackages}
+
+library(readr)
+library(knitr)
+library(kableExtra)
+
+```
+
+
+```{r calldb}
+
+macro_dataset <- read_csv("../data/supplementary_data/macroscopic_dataset.csv")
+
+knitr::kable(head(macro_dataset [1:3], 25), booktabs = TRUE, longtable = TRUE, caption = "Dataset for macroscopic description of the geological samples.") %>% 
+  column_spec(1, width = "4cm") %>%
+  column_spec(2, width = "3cm") %>%
+  column_spec(3, width = "12cm") %>% 
+  kable_styling(font_size = 9) %>% 
+  kable_styling(latex_options = c("repeat_header","hold_position"))
+
+```
+
+```{r petrodataset, echo=FALSE}
+
+petro_dataset <- data.frame(Variable = c("ID", "Outcrop/level", "Lithology", "Texture", "Microstructure", "Orthochem", "Orthochem type", "Orthochem description", "Orthochem (%)", "Allochem", "Allochem (freq)", "Bioclast", "Bioclast (freq)", "Porosity (%)", "Porosity type", "Sedimentary structures"),
+                            "Allowed Values" = c("","","", "Mudstone, Wackestone, Packstone, Grainstone, Boundstone, Other", "Homogeneous, Banded, Laminar, Nodular, Brexoid, Other", "", "Essential (ES), Accessory (AC), Secondary (SE)", "", "", "", "Rare, Uncommon, Common, Very frequent", "", "Rare, Uncommon, Common, Very frequent", "", "Interparticle, Moldic, Fenestral, Fracture, Vuggy, Shelter, Other", "Parallel lamination, Convoluted lamination, Bands/zonations, Burrow, Other"),
+                            Description = c("Individual thinsection ID.", 
+                            "Outcrop name or archaeological level.", 
+                            "Type of rock", 
+                            "Mudstone: Muddy carbonate rock containing less then 10 % grains; Wackestone: Mud-supported carbonate rock containing more than 10 % grains; Packstone: Grain-supported muddy carbonate rock; Grainstone: Mud-free carbonate rocks, which are grain supported; Boundstone: Carbonate rocks showing signs of being bound during deposition.", 
+                            "Distribution of crystals and clasts within the rock at a microscopic scale. Homogeneous: equally spread in the rock; Banded: distributed in bands; Nodular: distributed in clumps; Brechoid: fracturing of the rock irregularly.", 
+                            "Materials formed in two ways: 1) deposited directly from supersaturated aqueous solutions due to chemical reactions or evaporation; 2) formed by the replacement of existing sedimentary materials.", 
+                            "Essential: minerals that form more than 5% of the volume of the rock; Accessory: Minerals with proportion of less than 5% of the volume of the rock; Secondary: products of the alteration (hydrothermal or physical), independent of the proportion within the rock.", 
+                            "General description of the orthochem and where it is identified.", 
+                            "Approximate percentage of the orthochem's presence in the total thin-section area.", 
+                            "Material formed by the movement and reorganization into new shapes by chemical, physical or biological processes within the depositional basin (ex. ooliths, fecal pellets, iron oxide minerals).", 
+                            "Rare: present one or two elements; Uncommon: present three to 10 elements; Common: present 11 to 20 elements; Very frequent:> 20 elements.", 
+                            "Also known as skeletal particles, are the remains (complete or fragmented) of the hard parts of carbonate-secreeting organisms.", 
+                            "Rare: present one or two elements; Uncommon: present three to 10 elements; Common: present 11 to 20 elements; Very frequent:> 20 elements.", 
+                            "Approximate frequency of effective porosity.", 
+                            "Interparticle: porosity between particles; Moldic: Porosity formed by selective removal of an individual constituent of the rock; Fenestral: Pores larger than grain-supported interstices (interparticle); Fracture: Porosity formed by fracturing; Vug: Pores larger then 1/16 mm in diameter and somewhat equant in shape; Shelter: Porosity created by the sheltering effect of large sedimentary particles; Other: Other types of porosity.", 
+                            "Parallel lamination: sedimentary strata less than 10 mm thick, recognizable due to variation in structure or composition and more or less parallel bounding surfaces; Convoluted lamination: symmetrical about a vertical plane or leaning and asymmetrical, and usually exhibit narrow vertical upturned laminae, often truncated at the top, separated by a broader synclinal downfolds; Bands/zonations: limited areas with different characteristics related to changes in the sedimentation or cementation process; Burrow: bioturbation structures caused by activity of an organism that disrupts the stratification features; Other: Other types of sedimentary structures."),
+                            Reference = c("", "", "", 
+                            "According to Dunham (1962)", 
+                            "According to Dorado (1989, pp. 21)", 
+                            "According to Vernon (2018, pp. 24-25)", 
+                            "According to Dorado (1989, pp. 26)", 
+                            "", 
+                            "", 
+                            "According to Vernon (2018, pp. 25, 27)", 
+                            "", 
+                            "According to Adams, McKenzie and Guilford (1991, pp. 39)", 
+                            "", 
+                            "", 
+                            "According to Choquette and Pray (1970)", 
+                            "According to Middleton et al. (2003)")
+                            )
+knitr::kable(head(petro_dataset[1:4], 16), booktabs=TRUE, caption = "Dataset for petrographic analysis") %>% 
+  column_spec(1, bold = T, width = "3 cm") %>% 
+  kable_styling(latex_options = "scale_down") %>% 
+  column_spec(2, width = "4 cm") %>% 
+  column_spec(3, width = "15 cm") %>% 
+  column_spec(4, width = "4 cm")
+
+```
+
+

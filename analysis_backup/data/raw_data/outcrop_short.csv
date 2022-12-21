@@ -1,0 +1,58 @@
+﻿Sample ID,Outcrop name,State,Age,Chert morphology,Chert frequence,Chert variability,Chert size
+SP3_CSV,Cabo S. Vicente,Primary,Lower Jurassic,Nodule/Bedded,Sporadic,Homogeneous,2-5cm
+SP4_CSV,Cabo S. Vicente,Primary,Lower Jurassic,Bedded,Abundant,Homogeneous,-
+SP6_CSV,Cabo S. Vicente,Primary,Lower Jurassic,Bedded,Abundant,Variable,-
+SP7_CSV,Cabo S. Vicente,Primary,Lower Jurassic,Nodule/Bedded,Abundant,Homogeneous,-
+SP8_PdA,Ponta dos Altos Este,Primary,Lower Jurassic,Nodule,Sporadic,Variable,5-20cm
+SP9_PdA,Ponta dos Altos Este,Primary,Lower Jurassic,Nodule,Abundant,Variable,5-20cm
+SP10_PdA,Ponta dos Altos Este,Primary,Lower Jurassic,Nodule,Abundant,Homogeneous,5-10cm
+SP12_PBX,Praia do Belixe,Primary,Lower Jurassic,Nodule,Sporadic,Homogeneous,-
+SP13_PBX,Praia do Belixe,Primary,Lower Jurassic,Nodule,Abundant,Variable,Max. 15cm
+SP14_PBX,Praia do Belixe,Primary,Lower Jurassic,Nodule/Bedded,Abundant,Variable,Max. 15cm
+SP15_PBX,Praia do Belixe,Primary,Lower Jurassic,Nodule/Bedded,Abundant,Homogeneous,Max. 20cm
+SP16_PBX,Praia do Belixe,Primary,Lower Jurassic,Nodule,Abundant,Homogeneous,3cm
+SP17_PBX,Praia do Belixe,Primary,Lower Jurassic,Nodule,Abundant,Variable,5-15 cm
+SP18_PBX,Praia do Belixe,Primary,Lower Jurassic,Nodule/Bedded,Abundant,Variable,-
+SP19_PBX,Praia do Belixe,Primary,Lower Jurassic,Nodule,Rare,Variable,5-20cm
+SP20_BLS,Belixe Sul,Sub-primary,Lower Jurassic,-,Abundant,Variable,-
+SP21_BLS,Belixe Sul,Sub-primary,Lower Jurassic,Nodule,Abundant,Variable,3-8cm
+SP22_BLS,Belixe Sul,Primary,Lower Jurassic,Nodule,Sporadic,Homogeneous,3-8cm
+SP23_BLN,Belixe Norte,Secondary,N/A,-,Abundant,Variable,-
+SP24_CSV,Cabo S. Vicente,Primary,Lower Jurassic,Nodule,Sporadic,Homogeneous,5cm
+SP25_CSV,Cabo S. Vicente,Primary,Lower Jurassic,Nodule,Rare,Homogeneous,-
+SP26_CSV,Cabo S. Vicente,Secondary,Lower Jurassic,-,Abundant,Homogeneous,-
+SP27_CSV,Cabo S. Vicente,Primary,Lower Jurassic,Nodule,Rare,Homogeneous,5-10cm
+SP28_ASP,Aspa,Primary,Lower Jurassic,Nodule,Sporadic,Variable,5cm
+SP29_ASP,Aspa,Secondary,Lower Jurassic,-,Abundant,Variable,<5cm
+SP30_FZF,Foz dos Fornos,Primary,Lower Jurassic,Nodule,Rare,Homogeneous,Max. 15cm
+SP31_FZF,Foz dos Fornos,Sub-primary,Lower Jurassic,Nodule,Abundant,Variable,<5cm
+SP32_FZF,Foz dos Fornos,Primary,Lower Jurassic,Nodule,Abundant,Variable,4-8cm
+SP33_FZF,Foz dos Fornos,Primary,Lower Jurassic,Nodule,Abundant,Variable,4-8cm
+SP34_PdA,Ponta dos Altos Este,Primary,Lower Jurassic,Nodule,Abundant,Variable,4-8cm
+SP35_BLX,Belixe,Isolated find,N/A,-,-,-,-
+SP36_PtA,Ponta da Atalaia,Isolated find,N/A,-,-,-,-
+SP37_PtA,Ponta da Atalaia,Secondary,Upper Jurassic,-,Abundant,Variable,-
+SP39_AND,Andorinha,Secondary,Upper Jurassic,-,Sporadic,Homogeneous,-
+SP40_FER,Ferrel,Primary,Lower Jurassic,Nodule,Abundant,Variable,-
+SP41_FER,Ferrel,Secondary,Lower Jurassic,-,Sporadic,Variable,-
+SP47_CdC,Casal da Colina,Primary,Middle Jurassic,Nodule,Rare,Homogeneous,3-8cm
+SP48_CdC,Casal da Colina,Secondary,Middle Jurassic,-,Rare,Variable,-
+SP49_CdC,Casal da Colina,Secondary,Middle Jurassic,-,Rare,Variable,-
+SP50_CdC,Casal da Colina,Primary,Middle Jurassic,Nodule,Sporadic,Homogeneous,3-5cm
+SP52_CdC,Casal da Colina,Secondary,Middle Jurassic,-,Rare,Homogeneous,-
+SP53_GUI,Guilhim,Secondary,Middle Jurassic,-,Sporadic,Variable,-
+SP54_GUI,Guilhim,Isolated find,N/A,-,-,-,-
+SP55_CAL,Caliços,Secondary,Middle Jurassic,-,Rare,Homogeneous,-
+SP56_JOR,Jordana,Sub-primary,Upper Jurassic,Nodule,Abundant,Homogeneous,2-20cm
+SP57_JOR,Jordana,Primary,Upper Jurassic,Nodule,Abundant,Homogeneous,2-5cm
+SP58_JOR,Jordana,Primary,Upper Jurassic,Nodule,Sporadic,Homogeneous,5cm
+SP59_JOR,Jordana,Primary,Upper Jurassic,Nodule,Abundant,Homogeneous,3-5cm
+SP61_PER,Peral,Other,Upper Jurassic,Nodule,Sporadic,Homogeneous,2-5cm
+SP62_OLV,Oliveiras,Secondary,Middle Jurassic,-,Abundant,Variable,-
+SP63_OLV,Oliveiras,Primary,Middle Jurassic,Nodule,Sporadic,Homogeneous,2-15cm
+SP64_OLV,Oliveiras,Isolated find,N/A,-,-,-,-
+SP65_MALH,Malhão,Primary,Middle Jurassic,Nodule,Sporadic,Homogeneous,5cm
+SP66_MALH,Malhão,Primary,Middle Jurassic,Nodule,Sporadic,Homogeneous,5cm
+SP67_DESCAM,Cabeço Descampado,Secondary,N/A,Nodule,Sporadic,Homogeneous,-
+SP68_PEDR,Pedreira,Other,N/A,-,Rare,Homogeneous,-
+SP69_MAR,Praia da Mareta,Sub-primary,Upper Jurassic,Nodule,Abundant,Variable,Max. 25cm
