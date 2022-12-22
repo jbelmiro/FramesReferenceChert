@@ -194,6 +194,8 @@ In this study we identified several sources of chert nodules in southern Portuga
 
 # Acknowledgements
 
+We would like the thank the entities that funded the current research: Fundação para a Ciência e a Technologia (FCT) and ICArEHB (Interdisciplinary Center for Archaeology and the Evolution of Human Behavior). Furthermore, we want to thank Dr. Telmo Pereira and Dr. Carlos Ribeiro for allowing us to consult their previous research and for their support. Finally, we'd like to thank Jack Acres for the IT support essential for the creation of the online LusoLit database.
+
 <!-- The following line inserts a page break  -->
 
 \newpage
