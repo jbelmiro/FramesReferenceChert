@@ -28,11 +28,10 @@ output:
 bibliography: references.bib
 csl: "../templates/journal-of-archaeological-science.csl" # Insert path for the bib-style
 abstract: |
-  Text of abstract
+  Southwestern Iberia has played a key role in Middle to Upper Paleolithic transitions and Human occupations. It may have allowed the establishment of eco-cultural niches, through the continuous availability of resources throughout the Late Pleistocene, such as chert raw materials. Chert procurement studies in this region have received increasing attention in the past two decades, especially those related to multi-component sites such as Vale Boi (Algarve, Portugal). However, these studies have focused on the western portion of the region and used macroscopic descriptions. For further studies regarding Human mobility and raw material procurement and use at Vale Boi, a complete reference collection is necessary. This paper focuses on the location, diversity, and availability of chert raw materials in Southern Portugal (Algarve). Through macroscopic and petrographic approaches, we characterize the geological cherts to build a frame of reference for raw material studies in the region. Our results show that there are three main chert formations within Southern Portugal. Despite the variability within formations, the cherts show sufficient differences both at a macroscopic and petrographic level to allow source attribution. These results provide the starting ground for chert raw material studies in archaeological assemblages, in eco-cultural niches such as the archaeological site of Vale Boi.
+
 keywords: |
-  keyword 1; keyword 2; keyword 3
-highlights: |
-  These are the highlights. 
+  Chert raw material; Petrography; Southern Portugal; Provenance studies
 ---
 
 <!-- This is the format for text comments that will be ignored during renderings. Do not put R code in these comments because it will not be ignored. -->
