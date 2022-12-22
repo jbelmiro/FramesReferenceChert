@@ -7,21 +7,20 @@
 
 This repository contains the data and code for our paper:
 
-> Authors, (YYYY). *Title of your paper goes here*. Name of journal/book
+> Belmiro, J., Terradas, X., Cascalheira, J., (2022). *Creating frames of reference for chert exploitation during the Late Pleistocene in Southwesternmost Iberia.* 
 > <https://doi.org/xxx/xxx>
 
 Our pre-print is online here:
 
-> Authors, (YYYY). *Title of your paper goes here*. Name of
+> Belmiro, J., Terradas, X., Cascalheira, J., (2022). *Creating frames of reference for chert exploitation during the Late Pleistocene in Southwesternmost Iberia.*
 > journal/book, Accessed 22 Apr 2022. Online at
-> <https://doi.org/xxx/xxx>
+> 10.31219/osf.io/exhd5
 
 ### How to cite
 
 Please cite this compendium as:
 
-> Authors, (2022). *Compendium of R code and data for Title of your
-> paper goes here*. Accessed 22 Apr 2022. Online at
+> Belmiro, J., Terradas, X., Cascalheira, J., (2022). *Compendium of R code and data for Creating frames of reference for chert exploitation during the Late Pleistocene in Southwesternmost Iberia*. Accessed 22 Apr 2022. Online at
 > <https://doi.org/xxx/xxx>
 
 ## Contents
